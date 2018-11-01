@@ -29,6 +29,16 @@ $background-opacity: 0.8;
   }
 }
 
+// Set Text Color
+@function set-text-color($color) {
+  // This is added so that when primary color changes it will flip flop colors so it is still readable
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // Media Query Mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
