@@ -28,3 +28,28 @@ $background-opacity: 0.8;
     }
   }
 }
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content; // Anywhere we put the mixin in any file it will automatically be put in this section of the file
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content; // Anywhere we put the mixin in any file it will automatically be put in this section of the file
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content; // Anywhere we put the mixin in any file it will automatically be put in this section of the file
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content; // Anywhere we put the mixin in any file it will automatically be put in this section of the file
+  }
+}
